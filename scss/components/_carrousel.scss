@@ -1,0 +1,12 @@
+.Banner__carrusel{
+    width: 75%;
+    margin: auto;
+    padding: 20px 0px;
+}
+.carousel-item__Titulo{
+    margin: auto;
+    &--Texto{
+        font-family: "Run";
+        text-shadow: 1px 1px 2px black, 0 0 1em grey, 0 0 0.2em blue;
+    }
+}

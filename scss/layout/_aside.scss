@@ -1,0 +1,20 @@
+.Opciones__Item{
+    width: map-get($ancho-tienda, ancho-filtro);
+    text-align: left;
+}
+//contenido relacionado seccion articulos
+.Articulo__Relacionado{
+    width: 280px;
+    //map-get($ancho-articulos , ancho-aside);
+    background-color: $color-navbar;
+    padding: 15px;
+    &--Lista{
+        list-style: none;
+        text-align: justify;
+    }
+    .Item{
+        @extend.card;
+        margin: 10px 0px;
+        padding: 5px 2px;
+    }
+}

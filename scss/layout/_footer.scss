@@ -1,0 +1,24 @@
+.Pie{
+    background-color: $color-footer;
+    justify-items: center;
+    &__contenido{
+        background-color: $color-footer;
+    }
+}
+.Columna{
+    &__Titulo{
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 17px;
+      }
+    &__Subrayado{
+        width: 60px;
+        height: 2px;
+        background-color: white;
+        margin-bottom: 4px;
+        margin-top: 0px;
+    }
+    &__Logo{
+        width: 105px;
+    }
+}

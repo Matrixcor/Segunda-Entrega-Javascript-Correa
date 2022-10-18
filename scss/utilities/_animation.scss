@@ -1,0 +1,12 @@
+
+.Animacion:hover{
+    transform: scale(1.05);
+    box-shadow: none;
+}
+.Opciones__Bordes:hover{
+    border-bottom: solid 2px black;
+}
+a:link, a:visited, a:active {
+    text-decoration:none;
+    color: $color-header;
+}

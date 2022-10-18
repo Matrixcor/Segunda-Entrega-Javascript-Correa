@@ -1,0 +1,5 @@
+.Banner{
+    @include ancho-gral;
+    background-color: $color-fondobanner;
+    text-align: center;
+}

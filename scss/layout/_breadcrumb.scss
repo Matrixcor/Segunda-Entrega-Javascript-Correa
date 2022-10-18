@@ -1,0 +1,8 @@
+.Posicion{
+    background-color: $color-breadcrumb;
+    padding: 10px 0px;
+}
+.breadcrumb{
+    @include ancho-contenido;
+    background-color: $color-breadcrumb;
+}

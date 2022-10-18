@@ -1,0 +1,110 @@
+.Principal{ //general para las demas paginas
+    @include ancho-gral;   
+    .Principal__Seccion{
+        width: 99vw;
+        padding: $padding-seccion;
+        background-color: $color-secciones;
+        &--Titulo{
+            padding-bottom: 1vw;
+        }
+        &--Contenido{
+            @include ancho-contenido; 
+        }
+    }
+}
+.card{
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 7px 7px 10px gray;
+    &__titulo{
+        font-family: $font-titulo-card;
+        font-size: $size-titulo-card;
+    }
+}
+.Principal__Seccion-central{
+    padding: $padding-seccion;
+    background-color: $color-secciones-mod;
+    &--Titulo{
+        @extend .Principal__Seccion--Titulo;
+    }
+    &--Contenido{
+        @include ancho-contenido; 
+        @extend .Principal__Seccion--Contenido;
+    }
+}
+.Tienda{ //para la parte de la tienda
+    display: flex;
+    justify-content: center;
+    padding: 2vw 0vw;
+    &__Principal{
+        width: map-get($ancho-tienda,ancho-principal);
+        padding-left: map-get($ancho-tienda,padding-tienda);
+        text-align: center;
+        &--Buscador{
+            justify-content: center;
+            padding: map-get($ancho-tienda,padding-buscador);
+        } 
+        &--Seccion{
+            padding: $padding-seccion;
+            background-color: $color-secciones;
+        }
+        &--Seccion-central{
+            padding: $padding-seccion;
+            background-color: $color-secciones-mod;
+        }
+    }
+    .Seccion-Titulo{
+        padding-bottom: 1vw;
+    }
+}
+.Principal-Articulo{
+    @include ancho-contenido;
+    background-color: $color-articulos;
+    &__Texto{
+        font-size: $size-texto-central;
+        text-align: justify;
+    }
+    &__Acceso{
+        @extend .Tienda;
+        &--Imagen{
+            width: 30vw;
+        }
+    }
+    &__Seccion{
+        text-align: center;
+        &--Texto{
+            @extend .Principal-Articulo__Texto;
+        }
+    }
+    .Formulario{
+        padding: 0vw 1vw;
+        &__Item{
+            width: 280px;
+            font-size: $size-texto-central;
+            &--caja{
+                width: 280px;
+            }
+        }
+    }
+}
+.Articulo{
+    @extend .Tienda;
+    @include ancho-contenido;
+    background-color: $color-articulos;
+    &__Seccion{
+        width: map-get($ancho-articulos, ancho-texto);
+        @extend .Principal-Articulo__Seccion;
+        &--Texto{
+            @extend .Principal-Articulo__Texto;
+        }
+        &--opcion{
+            display: inline-flex;
+            padding: 0px 30px; 
+        }
+    }
+    .Opciones{
+        padding: 0px 20px;
+        margin: 0px 10px;
+        @extend.card;
+    }
+}
+

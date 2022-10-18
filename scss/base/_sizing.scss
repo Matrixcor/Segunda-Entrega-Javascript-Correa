@@ -1,0 +1,32 @@
+// establezco los tamaños de las cajas
+@mixin dimension-header{
+    width: 99vw;
+    height: 6em;
+    text-align: center;
+}
+@mixin ancho-gral{
+    width: 99vw;
+    margin: auto;
+    justify-content: center;
+}
+@mixin ancho-contenido{
+    width: 80vw;
+    margin: auto;
+}
+@mixin dimension-articulo{
+    width: 60vw;
+    margin: auto;
+    text-align: justify;
+}
+$ancho-articulos:(
+    ancho-texto: 75vw,
+    ancho-aside: 15vw
+);
+$ancho-tienda:(   
+    ancho-filtro: 13vw,
+    ancho-principal: 67vw,
+    padding-tienda: 1vw,
+    padding-buscador: 10px
+
+);
+$padding-seccion:3vw 0.7vw;
