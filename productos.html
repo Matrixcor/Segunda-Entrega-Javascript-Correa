@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap">
+
     <title>NO GRAVITY - Productos</title>
 </head>
 <body>
@@ -59,12 +60,62 @@
             </div>
         </div>        
     </div>
-    <nav class="Posicion" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
-          <li class="breadcrumb-item active" aria-current="page">Tienda</li>
-        </ol>
-    </nav>
+
+    <div class="Barra-Busqueda">
+        <img class="Barra-Busqueda__Logo d-block justify-content-center" src="img/Logo-empresa-search-bar.jpg"   width="30" height="30" alt="Logo No Gravity">
+
+        <div class="Barra-Busqueda__Buscador"> 
+            <input type="text" class="search-input" placeholder="Busca aqui tus productos..." id="Buscador"> 
+            <a id="Buscador_Boton" class="search-icon"> <i class="fa fa-search"></i> </a> 
+        </div>
+    
+        <div>
+            <div class="text-center">
+                <!-- Button HTML (to Trigger Modal) -->
+                <a href="#myModal" class="trigger-btn" data-toggle="modal">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 20 20">
+                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                    </svg>
+                </a>
+            </div>
+            <!-- Modal HTML -->
+            <div id="myModal" class="modal fade">
+                <div class="modal-dialog modal-login">
+                    <div class="modal-content">
+                        <div class="modal-header">				
+                            <h4 class="modal-title">Member Login</h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <div>
+                                <div class="form-group">
+                                    <i class="fa fa-user"></i>
+                                    <input id="usuario" type="text" class="form-control" placeholder="Username" >
+                                </div>
+                                <div class="form-group">
+                                    <i class="fa fa-lock"></i>
+                                    <input id="contrasena" type="password" class="form-control" placeholder="Password">					
+                                </div>
+                                <div class="form-group">
+                                    <input id="acepta" type="submit" class="btn btn-primary btn-block btn-lg">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="#">Forgot Password?</a>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+
+        </div>
+        
+
+        <button id="AbreCarrito" class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Boton abre carrito provisorio</button>
+    </div>
+   
+
     <div class="Tienda">
         <aside class="Tienda__Filtro navbar navbar-expand-lg bg-light d-block">
             <div class="Tienda__Filtro--Contenido container-fluid">
@@ -213,160 +264,37 @@
                 </div>
             </div>
         </aside>
+
         <main class="Tienda__Principal">
-            <form class="Tienda__Principal--Buscador" action="post">
-                <input class="Buscador__Campo" type="search" placeholder="Busca aqui tu producto" name="buscar" id="buscar">
-                <input class="Buscador__Boton" type="submit" value="Buscar">
-            </form>
+            
+
             <section class="Tienda__Principal--Seccion"> 
                 <h2 class="Seccion-Titulo"> INDUMENTARIA </h2>
-                <div class="Seccion-Contenido row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4"> 
-                    <article class="col">
-                            <div class="card Animacion">
-                                <img src="img/productos/conjuntoss.jpg" class="card-img-top" alt="Conjuntos">
-                                <div class="card-body">
-                                    <h3 class="card__titulo">Conjuntos</h3>
-                                </div>
-                                <p class="item-price">$6500.00</p>
-                                <p class="item-codigo">Cod-1</p>
-                                <a href="#" class="btn card__boton">Comprar</a>
-                            </div>
-                    </article>
-                    <article class="col">
-                            <div class="card Animacion">
-                                <img src="img/productos/remera-modi.jpg" class="card-img-top" alt="Remeras y musculosa">
-                                <div class="card-body">
-                                    <h3 class="card__titulo">Remeras</h3>
-                                </div>
-                                <p class="item-price">$3500.00</p>
-                                <p class="item-codigo">Cod-2</p>
-                                <a href="#" class="btn card__boton">Comprar</a>
-                            </div>
-                    </article>
-                    <article class="col">
-                            <div class="card Animacion">
-                                <img src="img/productos/zapatillas.png" class="card-img-top" alt="Zapatillas">
-                                <div class="card-body">
-                                    <h3 class="card__titulo">Zapatilla</h3>
-                                </div>
-                                <p class="item-price">$15000.00</p>
-                                <p class="item-codigo">Cod-3</p>
-                                <a href="#" class="btn card__boton">Comprar</a>
-                            </div>
-                    </article>
-                    <article class="col">
-                            <div class="card Animacion">
-                                <img src="img/productos/indumentaria-guantes.png" class="card-img-top" alt="Par de Guantes">
-                                <div class="card-body">
-                                    <h3 class="card__titulo">Guantes</h3>
-                                </div>
-                                <p class="item-price">$1500.00</p>
-                                <p class="item-codigo">Cod-4</p>
-                                <a href="#" class="btn card__boton">Comprar</a>
-                            </div>
-                    </article>
+                
+                <div id="Seccion" class="Seccion-Contenido row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4"> 
+                    <div id="Items">
+                       
+                    </div>
                 </div>
+                
             </section>
-            <section class="Tienda__Principal--Seccion-central">
-                <h2 class="Seccion-Titulo"> BARRAS </h2>
-                <div class="Seccion-contenido row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4">
-                    <article class="col">
-                            <div class="card Animacion">
-                                <img src="img/productos/barrass.jpg" class="card-img-top" alt="Conjunto">
-                                <div class="card-body">
-                                    <h3 class="card__titulo">Barras</h3>
-                                </div>
-                                <p class="item-price">$12000.00</p>
-                                <p class="item-codigo">Cod-5</p>
-                                <a href="#" class="btn card__boton">Comprar</a>
-                            </div>
-                    </article>
-                    <article class="col">
-                            <div class="card Animacion">
-                                <img src="img/productos/discoss.jpg" class="card-img-top" alt="Discos para barras de banco">
-                                <div class="card-body">
-                                    <h3 class="card__titulo">Discos</h3>
-                                </div>
-                                <p class="item-price">$7500.00</p>
-                                <p class="item-codigo">Cod-6</p>
-                                <a href="#" class="btn card__boton">Comprar</a>
-                            </div>
-                    </article>
-                    <article class="col">
-                            <div class="card Animacion">
-                                <img src="img/productos/mancuernass.jpg" class="card-img-top" alt="Mancuernas de arena">
-                                <div class="card-body">
-                                    <h3 class="card__titulo">Mancuernas</h3>
-                                </div>
-                                <p class="item-price">$6500.00</p>
-                                <p class="item-codigo">Cod-7</p>
-                                <a href="#" class="btn card__boton">Comprar</a>
-                            </div>
-                    </article>
-                    <article class="col">
-                            <div class="card Animacion">
-                                <img src="img/productos/bandas-elasticas.png" class="card-img-top" alt="Bandas Elasticas">
-                                <div class="card-body">
-                                    <h3 class="card__titulo">Bandas</h3>
-                                </div>
-                                <p class="item-price">$3500.00</p>
-                                <p class="item-codigo">Cod-8</p>
-                                <a href="#" class="btn card__boton">Comprar</a>
-                            </div>
-                    </article>
-                </div>
-            </section>
-            <section class="Tienda__Principal--Seccion">
-                <h2 class="Seccion-Titulo">SUPLEMENTOS</h2>
-                <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4">
-                    <article class="col">
-                            <div class="card Animacion">
-                                <img src="img/productos/AMINOACIDOS.jpg" class="card-img-top" alt="Conjunto">
-                                <div class="card-body">
-                                    <h3 class="card__titulo"> Aminoacidos</h3>
-                                </div>
-                                <p class="item-price">$4500.00</p>
-                                <p class="item-codigo">Cod-9</p>
-                                <a href="#" class="btn card__boton">Comprar</a>
-                            </div>
-                    </article>
-                    <article class="col">
-                            <div class="card Animacion">
-                                <img src="img/productos/ANIMALS.jpg" class="card-img-top" alt="Pack de nutrientes">
-                                <div class="card-body">
-                                    <h3 class="card__titulo">Animal packs</h3>
-                                </div>
-                                <p class="item-price">$7500.00</p>
-                                <p class="item-codigo">Cod-10</p>
-                                <a href="#" class="btn card__boton">Comprar</a>
-                            </div>
-                    </article>
-                    <article class="col">
-                            <div class="card Animacion">
-                                <img src="img/productos/suplementos.jpg" class="card-img-top" alt="Suplementos deportivos">
-                                <div class="card-body">
-                                    <h3 class="card__titulo">Proteinas</h3>
-                                </div>
-                                <p class="item-price">$6700.00</p>
-                                <p class="item-codigo">Cod-11</p>
-                                <a href="#" class="btn card__boton">Comprar</a>
-                            </div>
-                    </article>
-                    <article class="col">
-                            <div class="card Animacion">
-                                <img src="img/productos/Batidos.png" class="card-img-top" alt="Batidos">
-                                <div class="card-body">
-                                    <h3 class="card__titulo">Batidos</h3>
-                                </div>
-                                <p class="item-price">$5900.00</p>
-                                <p class="item-codigo">Cod-12</p>
-                                <a href="#" class="btn card__boton">Comprar</a>
-                            </div>
-                    </article>
-                </div>
-            </section>
+            
         </main>
-    </div>    
+        
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasRightLabel">Carrito de Compras</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+        <div  class="offcanvas-body">
+            <div id="cuerpocarrito">
+
+            </div>
+        </div>
+    </div>
+    </div>  
+
+
     <footer class="Pie text-center text-lg-start text-white">
         <div class="Pie__contenido bg-secondary d-flex justify-content-between p-4">
             <div class="Pie__contenido--redes me-5">
@@ -428,8 +356,17 @@
             </div>
         </div>
     </footer>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-    <script src="js/script-objetos.js"></script>
-    <script src="js/script.js"></script>
+    <script src="js/productos.js"></script>
+    <script src="js/usuarios.js"></script>
+    <script src="js/carrito.js"></script>
+    <script src="js/login.js" ></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
